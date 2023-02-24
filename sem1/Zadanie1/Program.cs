@@ -8,7 +8,8 @@ int a = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("enter the second number");
 int b = Convert.ToInt32(Console.ReadLine());
 
-if(a>b){
+if (a > b)
+{
     Console.WriteLine("the first number is greater");
 }
 else Console.WriteLine("the first number is less");
