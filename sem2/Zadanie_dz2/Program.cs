@@ -7,9 +7,11 @@ Console.WriteLine(" Enter number ");
 int number = Convert.ToInt32(Console.ReadLine());
 if (number < 100) Console.WriteLine("no third number ");
 
-if (number >100){
-    int thirdnumber = number % 10;
-
-    Console.WriteLine(thirdnumber);
+while (number > 999)
+{
+    number /= 10;
 }
+int a = number % 10;
+Console.WriteLine(a);
+
 
