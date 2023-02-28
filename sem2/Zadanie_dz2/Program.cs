@@ -6,16 +6,22 @@
 Console.WriteLine(" Enter number ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-
-while (number > 999)
+if (number < 100) Console.Write("no third digit");
+else
 {
-    
-    number = number / 10;
-}  
-int a = number %10; 
-Console.Write(a);
-    
-if(number <100) Console.Write("no third number");    
+    while (number > 999)
+    {
+
+        number = number / 10;
+    }
+    int a = number % 10;
+    Console.Write(a);
+}
+
+
+
+
+
 
 
 
