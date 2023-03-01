@@ -16,7 +16,7 @@ else
     }
     int a = number % 10;
     Console.Write(a);
-}
+}   
 
 
 
