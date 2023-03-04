@@ -9,10 +9,10 @@ int getInt()
 Console.WriteLine("enter coordinates of points A and B");
 
 int x1 = getInt(); //A_x
-int x2 = getInt(); //B_x
-int y1 = getInt(); //A_y
-int y2 = getInt(); //B_y
-int z1 = getInt(); //A_z
+int y1 = getInt(); //B_x
+int z1 = getInt(); //A_y
+int x2 = getInt(); //B_y
+int y2 = getInt(); //A_z
 int z2 = getInt(); //B_z
 
 double res = Math.Sqrt(Math.Pow(x1 - x2, 2) + Math.Pow(y1 - y2, 2) + Math.Pow(z1 - z2, 2));
