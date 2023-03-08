@@ -1,4 +1,5 @@
-﻿// Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+﻿// Задача 25: Напишите цикл, который принимает на
+// вход два числа (A и B) и возводит число A в натуральную степень B.
 // 3, 5 -> 243 (3⁵)
 // 2, 4 -> 16
 
@@ -23,11 +24,20 @@ int B = ReadIntNumber();
 // Решение: k=329-1-7=321.
 // Console.WriteLine(count);
 // int bot = A;
-int a = A;
+// int a = A;
+// int count = B;
+// int sum = 1;
+
+//     sum*=a;
+
+
+int sar = 1;
 int count = B;
-int sum = 1;
-
-    sum*=a;
-
-
-Console.WriteLine(sum);
+int summa = 1;
+int str= A;
+while (sar <= count)
+{
+    summa *= str;
+    sar++;
+}
+Console.WriteLine(summa);
