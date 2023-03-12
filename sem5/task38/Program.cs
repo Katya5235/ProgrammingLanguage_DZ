@@ -2,17 +2,17 @@
 // Найдите разницу между максимальным и минимальным элементов массива.
 // [3 7 22 2 78] -> 76
 
-int[] array = new int[] { 55, 68, 34, 6, 97, 81, 13 };
+
 
 int SearchMaxNumber(int[] a)
 {
 
     int max = 0;
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < a.Length; i++)
     {
-        if (array[i] > max)
+        if (a[i] > max)
         {
-            max = array[i];
+            max = a[i];
         }
 
     }
@@ -20,16 +20,17 @@ int SearchMaxNumber(int[] a)
 }
 int SearchMinNumber(int[] b)
 {
-    int min = array[0];
-    for (int i = 0; i < array.Length; i++)
+    int min = b[0];
+    for (int i = 1; i < b.Length; i++)
     {
-        if (array[i] < min)
+        if (b[i] < min)
         {
-            min = array[i];
+            min = b[i];
         }
     }
     return min;
 }
+int[] array = new int[] { 100, 1000, 134, 696, 979, 811, 13 };
 int Maxnum = SearchMaxNumber(array);
 Console.WriteLine($" Максимальное число = {Maxnum}");
 int MinNum = SearchMinNumber(array);
