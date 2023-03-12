@@ -4,7 +4,7 @@
 
 int[] array = new int[] { 55, 68, 34, 6, 97, 81, 13 };
 
-int SearchMaxDigit(int[] a)
+int SearchMaxNumber(int[] a)
 {
 
     int max = 0;
@@ -18,13 +18,9 @@ int SearchMaxDigit(int[] a)
     }
     return max;
 }
-
-int MaxDigit = SearchMaxDigit(array);
-Console.WriteLine($" Максимальное число = {MaxDigit}");
-
-int SearchMinDigit(int[] b)
+int SearchMinNumber(int[] b)
 {
-    int min = MaxDigit;
+    int min = array[0];
     for (int i = 0; i < array.Length; i++)
     {
         if (array[i] < min)
@@ -34,7 +30,11 @@ int SearchMinDigit(int[] b)
     }
     return min;
 }
+int Maxnum = SearchMaxNumber(array);
+Console.WriteLine($" Максимальное число = {Maxnum}");
+int MinNum = SearchMinNumber(array);
+Console.WriteLine($" Минимальное число = {MinNum}");
+Console.WriteLine($" Разница между максимальным и минимальным значением  = {Maxnum  - MinNum}");
 
-int MinDigit = SearchMinDigit(array);
-Console.WriteLine($" Минимальное число = {MinDigit}");
-Console.WriteLine($" Разница между максимальным и минимальнымзначением  = {MaxDigit - 1 - MinDigit}");
+
+
