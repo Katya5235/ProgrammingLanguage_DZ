@@ -22,7 +22,7 @@ void FillArray(double[,] ar)
     {
         for (int j = 0; j < ar.GetLength(1); j++)
         {
-            ar[i, j] = Convert.ToDouble(new Random().Next(1, 16)) / 10;
+            ar[i, j] =  Random.Shared.NextDouble()*10;
 
         }
     }
