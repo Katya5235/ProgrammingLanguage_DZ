@@ -14,14 +14,16 @@ int[,] array = new int[4, 6];
 FillArray(array);
 
 
-if (numrows >=0 || numcolumn >=0)
+if (numrows > array.GetLength(1) || numcolumn > array.GetLength(0))
 {
     Console.WriteLine(" Такого элемента нет в массиве  ");
 }
-if (numrows < 0 || numcolumn < 0)
+
+if (numcolumn < 0 || numrows < 0)
 {
     Console.WriteLine(" Такого элемента нет в массиве  ");
 }
+
 else
 {
     Console.WriteLine($" элемент  строки {numrows} и столбца {numcolumn} является элемент:{array[numcolumn - 1, numrows - 1]}");
