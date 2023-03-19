@@ -6,20 +6,25 @@
 // ​5 9 2 3
 // ​8 4 2 4
 // ​1 7 -> такого числа в массиве нет
-Console.WriteLine("Введите позицию элемента в строке  ");
+Console.Write("Введите позицию элемента в строке  ");
 int numrows = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите позицию элемента в столбце  ");
+Console.Write("Введите позицию элемента в столбце  ");
 int numcolumn = Convert.ToInt32(Console.ReadLine());
 int[,] array = new int[4, 6];
 FillArray(array);
 
 
-if(numrows> array.GetLength(1) || numcolumn> array.GetLength(0))
+if (numrows >=0 || numcolumn >=0)
 {
     Console.WriteLine(" Такого элемента нет в массиве  ");
 }
-else {
-Console.WriteLine($" элемент  строки {numrows} и столбца {numcolumn} является элемент:{array[numcolumn - 1,numrows - 1]}");
+if (numrows < 0 || numcolumn < 0)
+{
+    Console.WriteLine(" Такого элемента нет в массиве  ");
+}
+else
+{
+    Console.WriteLine($" элемент  строки {numrows} и столбца {numcolumn} является элемент:{array[numcolumn - 1, numrows - 1]}");
 }
 PrintArray(array);
 
@@ -39,12 +44,12 @@ void PrintArray(int[,] arra)
 {
     for (int i = 0; i < arra.GetLength(0); i++)
     {
-        
+
         for (int j = 0; j < arra.GetLength(1); j++)
         {
             Console.Write(arra[i, j] + " ");
         }
-        
+
         Console.WriteLine();
     }
 }
