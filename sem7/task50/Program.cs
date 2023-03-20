@@ -13,7 +13,7 @@ Console.Write("Введите номер строки: ");
 int numrows = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите номер столбца: ");
 int numcolumn = Convert.ToInt32(Console.ReadLine());
-if (numcolumn > array.GetLength(0) && numrows > array.GetLength(1) || numcolumn < 0 && numrows < 0)
+if (numcolumn > array.GetLength(0) || numrows > array.GetLength(1) && numcolumn < 0 || numrows < 0)
 {
     Console.WriteLine("Такого элемента нет ");
 }
