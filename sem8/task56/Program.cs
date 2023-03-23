@@ -18,8 +18,8 @@ void Main()
     int[,] matrix = new int[ROWS, COLUMS];
     Fill2DMatrix(matrix, LEFTBORDER, RIGHTBORDER);
     Print2DMatrix(matrix);
-    int summin = SumOfRowElements(matrix);
-    Console.WriteLine($" min = {summin}");
+    int NumberOfRow = RowNumberWithMinimumSumOfElements(matrix);
+    Console.WriteLine($" Строка с наименьшей суммой элементов  = {NumberOfRow}");
 }
 
 
@@ -54,35 +54,34 @@ void Print2DMatrix(int[,] myarray)
 }
 
 
-int SumOfRowElements(int[,] matrix)
+int RowNumberWithMinimumSumOfElements(int[,] matrix)
 {
-    int sum = 0;
-    int min = 0;
-    int sum1 = 0;
 
+    int minSum = 0;
+    int index =0;
+    for (int j = 0; j < matrix.GetLength(1); j++)
+    {
+        minSum += matrix[0, j];
+    }
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        sum1=0;
+        int sum = 0;
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-
-            sum1 += matrix[i, j];
-
+            sum += matrix[i, j];
         }
-        if (sum1 > sum)
+        Console.WriteLine($" сумма строки {i+1} = {sum} ");
+        if (sum < minSum)
         {
-        sum = sum1;
+            minSum = sum;
+            index = i;
         }
-        else min =i+1;
-        Console.WriteLine($" {i + 1} = {sum1}");
-
-        
-
+    
     }
 
 
+    return index+1;
 
-    return min;
 }
 
 
