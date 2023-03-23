@@ -2,9 +2,9 @@
 // случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
 // [345, 897, 568, 234] -> 2
 
-int[] Fillarray()
+int[] Fillarray(int size)
 {
-    int[] array = new int[10];
+    int[] array = new int[size];
     for (int i = 0; i < array.Length; i++)
     {
         array[i] = Random.Shared.Next(100, 1000);
@@ -28,7 +28,7 @@ int SumEvetDig(int[] array)
      return sum;
 }
 
-int[] Myarray = Fillarray();
+int[] Myarray = Fillarray(20);
 int sumvdig = SumEvetDig(Myarray);
 Console.WriteLine($" Наш массив  = [{string.Join("," ,Myarray)}]");
 Console.WriteLine($" Количество четных числел = {sumvdig}");

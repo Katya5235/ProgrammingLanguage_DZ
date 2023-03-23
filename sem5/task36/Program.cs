@@ -10,7 +10,7 @@ int[] FillArray(int size)
     int[] array = new int[size];
     for (int i = 0; i < array.Length; i++)
     {
-        array[i] = Random.Shared.Next(0, 61);
+        array[i] = Random.Shared.Next(-10, 61);
     }
     return array;
 }
@@ -18,7 +18,7 @@ int[] FillArray(int size)
 int SumOfOddNum(int[] unamatriz)
 {
     int sum = 0;
-    for (int i = 0; i < unamatriz.Length; i++)
+    for (int i = 1; i < unamatriz.Length; i=i+2)
     {
         if (i % 2 != 0)
         {
